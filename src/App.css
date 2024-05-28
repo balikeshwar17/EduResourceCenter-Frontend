@@ -1,0 +1,571 @@
+
+/* Header styles */
+header {
+    background-color: #333; /* Background color */
+    color: #fff; /* Text color */
+    padding: 20px; /* Padding around header */
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+}
+
+h1 {
+    margin: 0; /* Remove default margin */
+    font-size: 24px; /* Adjust font size */
+    flex: 1; /* Make the h1 element flexible */
+}
+
+h1 a {
+    text-decoration: none; /* Remove default underline */
+    color: #ffcc00; /* Logo text color */
+    font-weight: bold; /* Add bold font weight */
+    margin-left: 30px; /* Adjust margin */
+}
+
+/* Navigation styles */
+nav {
+    flex: 3; /* Make the nav element flexible */
+}
+
+nav ul {
+    list-style-type: none; /* Remove default list styles */
+    padding: 0; /* Remove default padding */
+    margin: 0; /* Remove default margin */
+    display: flex; /* Use flexbox */
+    justify-content: space-around; /* Space items evenly */
+    align-items: center; /* Center items vertically */
+}
+
+nav ul li {
+    flex: 1; /* Make each list item flexible */
+    text-align: center; /* Center text in each list item */
+}
+
+nav ul li a,
+nav ul li button {
+    color: #fff; /* Text color */
+    text-decoration: none; /* Remove default underline for links */
+    background: none; /* No background for buttons */
+    border: none; /* No border for buttons */
+    cursor: pointer; /* Pointer cursor for buttons */
+    font-size: 18px; /* Adjust font size */
+    transition: color 0.3s; /* Add transition for smooth color change */
+    font-family: inherit; /* Inherit font family */
+    padding: 0; /* Remove padding for buttons */
+}
+
+nav ul li a:hover,
+nav ul li button:hover {
+    color: #ffcc00; /* Change color on hover */
+}
+
+nav ul li button {
+    outline: none; /* Remove outline */
+    margin: 0; /* Remove margin */
+    padding: 0; /* Remove padding */
+}
+
+
+
+
+
+/* RegisterPage */
+.register-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: calc(100vh - 40px); /* Full viewport height minus 40px top and bottom margin */
+    margin: 20px 0; /* 20px top and bottom margin, 0 left and right margin */
+    background-color: #f0f0f0; /* Light background color for the page */
+}
+
+
+.register-form-wrapper {
+    padding: 20px;
+    max-width: 400px;
+    width: 100%; /* Ensure the form takes up the available width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for better visual separation */
+}
+
+.register-form-wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.register-form-wrapper form div {
+    margin-bottom: 15px;
+}
+
+.register-form-wrapper label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.register-form-wrapper input,
+.register-form-wrapper select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.register-form-wrapper button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.register-form-wrapper button:disabled {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+}
+
+.login-link-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login-link-container p {
+    margin: 0;
+}
+
+.login-link-container a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.login-link-container a:hover {
+    text-decoration: underline;
+}
+
+
+
+/* LoginPage  */
+.login-page-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Full viewport height */
+    background-color: #f0f0f0; /* Light background color for the page */
+}
+
+.login-form-wrapper {
+    padding: 20px;
+    max-width: 400px;
+    width: 100%; /* Ensure the form takes up the available width */
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow for better visual separation */
+}
+
+.login-form-wrapper h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.login-form-wrapper form div {
+    margin-bottom: 15px;
+}
+
+.login-form-wrapper label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.login-form-wrapper input {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+.login-form-wrapper button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.login-form-wrapper button:disabled {
+    background-color: #9e9e9e;
+    cursor: not-allowed;
+}
+
+.error-message {
+    color: red;
+    margin-bottom: 15px;
+    text-align: center;
+}
+
+.register-link-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.register-link-container p {
+    margin: 0;
+}
+
+.register-link-container a {
+    color: #4caf50;
+    text-decoration: none;
+}
+
+.register-link-container a:hover {
+    text-decoration: underline;
+}
+
+.userType-container {
+    margin-bottom: 15px;
+}
+
+.userType-container label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.userType-container select {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+
+h1,h2 {
+    text-align: center;
+  }
+  
+
+
+/* Homepage  */
+.home-page-container {
+    padding: 20px; /* Add padding for spacing */
+}
+
+.filter-bar {
+    display: flex; /* Use flexbox */
+    align-items: center; /* Align items vertically */
+    gap: 10px; /* Space between filter options */
+    margin-bottom: 20px; /* Space below filter bar */
+}
+
+.filter-group {
+    flex: 1; /* Flexible width */
+    position: relative; /* Position relative for suggestions list */
+}
+
+.filter-group label {
+    display: block; /* Label on top */
+    font-weight: bold; /* Bold text for labels */
+    margin-bottom: 5px; /* Space between label and input */
+    color: #333; /* Dark grey text color */
+}
+
+.filter-group input[type="text"],
+.filter-group select {
+    width: calc(100% - 30px); /* Reduced width for input fields */
+    padding: 8px; /* Padding inside inputs */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    background-color: #fff; /* White background */
+    font-size: 14px; /* Font size */
+    color: #333; /* Text color */
+    max-height: 200px; /* Set the maximum height */
+    overflow-y: auto; /* Enable vertical scrolling */
+    display: block; /* Ensure block display for proper layout */
+}
+
+.suggestions-list {
+    position: absolute;
+    top: 100%; /* Position below input */
+    left: 0;
+    width: 100%; /* Full width */
+    overflow-y: auto; /* Scrollable */
+    background-color: #fff; /* White background */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.suggestions-list li {
+    padding: 8px; /* Padding inside list items */
+    cursor: pointer; /* Pointer cursor */
+    color: #333; /* Text color */
+}
+
+.suggestions-list li:hover {
+    background-color: #f0f0f0; /* Light grey background on hover */
+}
+
+.papers-grid {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Responsive columns */
+    gap: 20px; /* Space between papers */
+}
+
+.paper-item {
+    background-color: #fff; /* White background */
+    padding: 15px; /* Padding inside paper items */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Light shadow */
+}
+
+.pdf-container {
+    margin-bottom: 10px; /* Space below PDF thumbnail */
+    border: 1px solid #ccc; /* Border around PDF thumbnail */
+    border-radius: 5px; /* Rounded corners */
+    overflow: hidden; /* Hide overflow */
+    width: 250px; /* Set width for PDF container */
+    height: 200px; /* Set height for PDF container */
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center align */
+    align-items: center; /* Center align */
+    background-color: #f9f9f9; /* Light grey background */
+}
+
+.pdf-link {
+    display: inline-block; /* Inline block for link */
+}
+
+.pdf-thumbnail {
+    width: 100%;
+    max-height: 200px; /* Adjust the maximum height as needed */
+    object-fit: contain; /* Maintain aspect ratio */
+    text-decoration: none;
+}
+
+.paper-details h3 {
+    font-size: 18px; /* Font size for titles */
+    color: #333; /* Text color */
+    margin-bottom: 10px; /* Space below title */
+}
+
+.paper-details p {
+    font-size: 14px; /* Font size for details */
+    color: #555; /* Text color */
+    margin: 2px 0; /* Space between details */
+}
+
+.pagination-box {
+    display: flex; /* Use flexbox */
+    justify-content: center; /* Center align pagination */
+    align-items: center; /* Center align items */
+    margin-top: 20px; /* Space above pagination */
+    font-size: 14px; /* Font size */
+    flex-direction: column; /* Stack elements vertically */
+}
+
+.pagination-info {
+    margin-bottom: 10px; /* Space below current/total info */
+}
+
+.pagination-buttons {
+    display: flex; /* Use flexbox */
+    gap: 10px; /* Space between buttons */
+}
+
+.pagination-buttons button {
+    padding: 5px 10px; /* Padding inside buttons */
+    border: none; /* No border */
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    cursor: pointer; /* Pointer cursor */
+    border-radius: 4px; /* Rounded corners */
+}
+
+.pagination-buttons button:disabled {
+    background-color: #cccccc; /* Grey background when disabled */
+    cursor: not-allowed; /* Not-allowed cursor when disabled */
+}
+
+
+
+
+/* Upload Paper  */
+.upload-container {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #f7f7f7;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.upload-title {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.upload-form {
+    display: grid;
+    grid-gap: 20px;
+}
+
+.upload-label {
+    font-weight: bold;
+}
+
+.upload-input,
+.upload-select {
+    width: calc(100% - 22px); /* Adjust width */
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.upload-select {
+    appearance: none;
+    background-image: url('data:image/svg+xml;utf8,<svg fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path fill="currentColor" d="M6 9l6 6 6-6"/></svg>');
+    background-repeat: no-repeat;
+    background-position: right 10px center;
+    padding-right: 30px;
+    max-height: 200px; /* Limit height */
+    overflow-y: auto; /* Enable scrolling */
+}
+
+.upload-button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.upload-button:hover {
+    background-color: #0056b3;
+}
+
+@media screen and (max-width: 600px) {
+    .upload-container {
+        max-width: 100%;
+        margin: 20px;
+    }
+}
+
+/* Edit and Delete Button  */
+.status-verified {
+    color: green; /* Green color for verified status */
+    font-weight: bold; /* Bold text */
+    background-color: #e0f7e0; /* Light green background */
+    padding: 5px; /* Padding around status */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.status-not-verified {
+    color: red; /* Red color for not verified status */
+    font-weight: bold; /* Bold text */
+    background-color: #f7e0e0; /* Light red background */
+    padding: 5px; /* Padding around status */
+    border-radius: 5px; /* Rounded corners */
+}
+
+.edit-button,
+.valid-button,
+.invalid-button,
+.delete-button {
+    padding: 8px 12px; /* Padding for buttons */
+    border: none; /* No border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor */
+    font-size: 14px; /* Font size */
+    transition: background-color 0.3s ease; 
+    display: inline-block; /* Inline block for proper spacing */
+    text-align: center; /* Center text */
+    flex: 1; /* Make buttons flexible */
+    max-width: 48%; /* Ensure buttons don't overflow */
+}
+
+.edit-button {
+    background-color: #007bff; /* Blue background */
+    color: #fff; /* White text */
+}
+
+.edit-button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.delete-button {
+    background-color: #dc3545; /* Red background */
+    color: #fff; /* White text */
+}
+
+.delete-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.valid-button {
+    background-color: #28a745; /* Green background */
+    color: #fff; /* White text */
+}
+
+.valid-button:hover {
+    background-color: #218838; /* Darker green on hover */
+}
+
+/* Styles for the invalid button */
+.invalid-button {
+    background-color: #dc3545; /* Red background */
+    color: #fff; /* White text */
+}
+
+.invalid-button:hover {
+    background-color: #c82333; /* Darker red on hover */
+}
+
+.buttons-container {
+    display: flex; /* Use flexbox */
+    justify-content: space-between; /* Space out buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: 10px; /* Space above the buttons container */
+}
+
+
+/* Upload buttons  */
+.upload-button {
+    background-color: #4caf50; /* Green background */
+    color: white; /* White text */
+    padding: 10px 20px; /* Padding */
+    border: none; /* Remove border */
+    border-radius: 5px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor on hover */
+    font-size: 16px; /* Font size */
+    transition: background-color 0.3s; /* Smooth transition */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-button:disabled {
+    background-color: #9e9e9e; /* Grey background when disabled */
+    cursor: not-allowed; /* Not-allowed cursor when disabled */
+}
+
+.upload-button:hover:not(:disabled) {
+    background-color: #45a049; /* Darker green on hover */
+}
+
