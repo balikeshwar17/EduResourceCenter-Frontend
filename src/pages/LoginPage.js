@@ -22,6 +22,7 @@ const LoginPage = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setLoading(true); // Start loading
+        // console.log()
         try {
             const url = formData.userType === 'user' 
                 ? `${process.env.REACT_APP_BACKEND_URL}/api/users/login` 
