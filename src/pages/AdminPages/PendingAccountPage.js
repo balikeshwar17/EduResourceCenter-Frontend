@@ -16,7 +16,7 @@ const PendingAccountPage = () => {
 
     const fetchPendingRequests = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/admins/pending-requests', {
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/admins/pending-requests`, {
                 withCredentials: true,
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const PendingAccountPage = () => {
     const handleAccept = async (adminId) => {
         setLoading({ ...loading, [adminId]: true });
         try {
-            const response = await axios.patch(`http://localhost:4000/api/admins/accept/${adminId}`, {}, {
+            const response = await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/admins/accept/${adminId}`, {}, {
                 withCredentials: true,
             });
             if (response.status === 200) {
@@ -63,7 +63,7 @@ const PendingAccountPage = () => {
     const handleDecline = async (adminId) => {
         setLoading({ ...loading, [adminId]: true });
         try {
-            const response = await axios.patch(`http://localhost:4000/api/admins/decline/${adminId}`, {}, {
+            const response = await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/admins/decline/${adminId}`, {}, {
                 withCredentials: true,
             });
             if (response.status === 200) {

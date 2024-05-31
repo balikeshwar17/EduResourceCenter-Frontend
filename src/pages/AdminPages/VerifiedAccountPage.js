@@ -16,7 +16,7 @@ const VerifiedAccountPage = () => {
 
     const fetchVerifiedAccounts = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/admins/verified-accounts', {
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/admins/verified-accounts`, {
                 withCredentials: true,
                 headers: {
                     'Content-Type': 'application/json',
@@ -47,7 +47,7 @@ const VerifiedAccountPage = () => {
         setLoading({ ...loading, [adminId]: true });
         
         try {
-            const response = await axios.delete(`http://localhost:4000/api/admins/remove/${adminId}`, {
+            const response = await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/admins/remove/${adminId}`, {
                 withCredentials: true,
             });
             if (response.status === 200) {

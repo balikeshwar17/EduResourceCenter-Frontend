@@ -24,8 +24,8 @@ const LoginPage = () => {
         setLoading(true); // Start loading
         try {
             const url = formData.userType === 'user' 
-                ? 'http://localhost:4000/api/users/login' 
-                : 'http://localhost:4000/api/admins/login';
+                ? `${process.env.REACT_APP_BACKEND_URL}/api/users/login` 
+                : `${process.env.REACT_APP_BACKEND_URL}/api/admins/login`;
 
             const response = await axios.post(url, formData, {
                 withCredentials: true, // Send cookies with the request
@@ -49,9 +49,14 @@ const LoginPage = () => {
             if (error.response && error.response.status === 401 && error.response.data ) {
                 if(error.response.data.notify) alert(error.response.data.notify);
                 else alert(error.response.data.message);
-            } else {
+            }
+            else if (error.response && error.response.status === 404 && error.response.data ) {
+                if(error.response.data.notify) alert(error.response.data.notify);
+                else alert(error.response.data.message);
+            }
+             else {
                 console.error(error); // Handle other errors
-                alert('Registration failed. Please try again.');
+                alert('Login failed. Please try again.');
             }
         } finally {
             setLoading(false); // Stop loading

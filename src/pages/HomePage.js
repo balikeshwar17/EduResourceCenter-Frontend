@@ -33,7 +33,7 @@ const HomePage = () => {
     const fetchPapers = async () => {
         try {
             const response = await axios.get(
-                'http://localhost:4000/api/papers',
+                `${process.env.REACT_APP_BACKEND_URL}/api/papers`,
                 {
                     params: { ...filters, page: currentPage },
                     withCredentials: true // Send cookies with the request
@@ -77,7 +77,7 @@ const HomePage = () => {
 
     const fetchCollegeSuggestions = async (query) => {
         try {
-            const response = await axios.get(`http://localhost:4000/api/papers/colleges?search=${query}`,
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/papers/colleges?search=${query}`,
                 {
                     withCredentials:true
                 }

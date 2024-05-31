@@ -25,7 +25,7 @@ const VerifiedPaperPage = () => {
 
     const fetchPapers = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/papers/my-verified-papers', {
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/papers/my-verified-papers`, {
                 withCredentials: true,
                 headers: {
                     'Content-Type': 'application/json',
@@ -51,7 +51,7 @@ const VerifiedPaperPage = () => {
     const handleDelete = async (paperId) => {
         setDeleteLoading({ ...deleteLoading, [paperId]: true }); // Start loading for delete action
         try {
-            await axios.delete(`http://localhost:4000/api/papers/admin/${paperId}`, {
+            await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/papers/admin/${paperId}`, {
                 withCredentials: true
             });
             setPapers(papers.filter(paper => paper._id !== paperId));
@@ -74,7 +74,7 @@ const VerifiedPaperPage = () => {
         console.log(paperId);
         setAddLoading({ ...addLoading, [paperId]: true }); // Start loading for add action
         try {
-            const response = await axios.patch(`http://localhost:4000/api/papers/valid/${paperId}`, null, {
+            const response = await axios.patch(`${process.env.REACT_APP_BACKEND_URL}/api/papers/valid/${paperId}`, null, {
                 withCredentials: true,
             });
             console.log(response);
@@ -90,7 +90,7 @@ const VerifiedPaperPage = () => {
 
     const handleInvalid = async (paperId) => {
         try {
-            const response=await axios.delete(`http://localhost:4000/api/papers/invalid/${paperId}`, 
+            const response=await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/papers/invalid/${paperId}`, 
             { withCredentials: true }
           );
             if(response.status===200){

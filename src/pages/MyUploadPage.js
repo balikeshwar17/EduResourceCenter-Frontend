@@ -23,7 +23,7 @@ const MyPapers = () => {
 
     const fetchPapers = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/papers/my-papers',
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/papers/my-papers`,
             {
                 withCredentials: true, // Send cookies with the request
                 headers: {
@@ -47,7 +47,7 @@ const MyPapers = () => {
 
     const handleDelete = async (paperId) => {
         try {
-            await axios.delete(`http://localhost:4000/api/papers/paper/${paperId}`,
+            await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/papers/paper/${paperId}`,
             {
                 withCredentials: true, // Send cookies with the request
                 headers: {

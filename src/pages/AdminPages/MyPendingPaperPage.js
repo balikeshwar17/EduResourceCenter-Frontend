@@ -23,7 +23,7 @@ const MyPendingPaperPage = () => {
 
     const fetchPapers = async () => {
         try {
-            const response = await axios.get('http://localhost:4000/api/papers/my-pending-papers', {
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/papers/my-pending-papers'`, {
                 withCredentials: true
             });
             console.log(response);
@@ -45,7 +45,7 @@ const MyPendingPaperPage = () => {
         console.log(paperId);
         try {
             const response = await axios.patch(
-                `http://localhost:4000/api/papers/valid/${paperId}`, 
+                `${process.env.REACT_APP_BACKEND_URL}/api/papers/valid/${paperId}`, 
                 {}, 
                 { 
                     withCredentials: true // Send cookies with the request
@@ -70,7 +70,7 @@ const MyPendingPaperPage = () => {
 
     const handleInvalid = async (paperId) => {
         try {
-            const response=await axios.delete(`http://localhost:4000/api/papers/invalid/${paperId}`, 
+            const response=await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/papers/invalid/${paperId}`, 
             { withCredentials: true }
           );
           console.log(response);
@@ -84,7 +84,7 @@ const MyPendingPaperPage = () => {
 
     const handleRemove = async (paperId) => {
         try {
-            await axios.delete(`http://localhost:4000/api/papers/remove/${paperId}`, { withCredentials: true });
+            await axios.delete(`${process.env.REACT_APP_BACKEND_URL}/api/papers/remove/${paperId}`, { withCredentials: true });
             setPapers(papers.filter(paper => paper._id !== paperId));
         } catch (error) {
             console.error('Error removing paper:', error);

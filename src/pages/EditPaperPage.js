@@ -32,7 +32,7 @@ const EditPaperPage = (req,res) => {
 
     const fetchPapers = async () => {
         try {
-            const response = await axios.get(`http://localhost:4000/api/papers/${id}`);
+            const response = await axios.get(`${process.env.REACT_APP_BACKEND_URL}/api/papers/${id}`);
             
             if (response.data && response.data.data) {
                 setPaperData(response.data.data);
@@ -76,7 +76,7 @@ const EditPaperPage = (req,res) => {
         formData.append('pdf', paperData.paper_file);
 
         try {
-            const response = await axios.put(`http://localhost:4000/api/papers/${id}`, formData, {
+            const response = await axios.put(`${process.env.REACT_APP_BACKEND_URL}/api/papers/${id}`, formData, {
                 headers: {
                     'Content-Type': 'multipart/form-data'
                 }

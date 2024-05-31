@@ -47,7 +47,7 @@ const UploadPage = () => {
         formData.append('pdf', paperData.paper_file);
 
         try {
-            const response = await axios.post('http://localhost:4000/api/papers/upload', formData,
+            const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/papers/upload`, formData,
              {
                 withCredentials:true,
                 headers: {

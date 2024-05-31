@@ -31,8 +31,8 @@ const RegisterPage = () => {
         // console.log(formData);
         try {
             const url = formData.userType === 'user'
-                ? 'http://localhost:4000/api/users/register'
-                : 'http://localhost:4000/api/admins/register';
+                ? `${process.env.REACT_APP_BACKEND_URL}/api/users/register`
+                : `${process.env.REACT_APP_BACKEND_URL}/api/admins/register`;
 
                 const response = await axios.post(url, formData, {
                     withCredentials: true, // Send cookies with the request
