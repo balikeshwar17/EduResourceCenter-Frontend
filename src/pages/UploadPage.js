@@ -33,7 +33,6 @@ const UploadPage = () => {
 
     const handleSubmit = async (e) => {
         e.preventDefault();
-
         const formData = new FormData();
         formData.append('paper_name', paperData.paper_name);
         formData.append('college', paperData.college);
@@ -47,6 +46,7 @@ const UploadPage = () => {
         formData.append('pdf', paperData.paper_file);
 
         try {
+            console.log(formData);
             const response = await axios.post(`${process.env.REACT_APP_BACKEND_URL}/api/papers/upload`, formData,
              {
                 withCredentials:true,

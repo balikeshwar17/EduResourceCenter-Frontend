@@ -13,8 +13,8 @@ const Header = () => {
     const onLogout = async () => {
         try {
             const url = userType === 'user' 
-                ? 'http://localhost:4000/api/users/logout' 
-                : 'http://localhost:4000/api/admins/logout';
+                ? `${process.env.REACT_APP_BACKEND_URL}/api/users/logout` 
+                : `${process.env.REACT_APP_BACKEND_URL}/api/admins/logout`;
 
             const response=await axios.post(url, {}, { withCredentials: true });
             if(response.status===200){
