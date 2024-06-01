@@ -1,0 +1,4 @@
+[build]
+  command = "npm run build"  # Your build script command
+  publish = "FRONTEND/build" # Directory where the built files are located
+  base = "FRONTEND"          # Base directory (root of the project)
